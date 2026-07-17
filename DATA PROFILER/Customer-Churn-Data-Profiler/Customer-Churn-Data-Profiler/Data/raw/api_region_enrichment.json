@@ -1,0 +1,27 @@
+{
+  "North": {
+    "Country": "India",
+    "Currency": "INR",
+    "Timezone": "Asia/Kolkata"
+  },
+  "South": {
+    "Country": "India",
+    "Currency": "INR",
+    "Timezone": "Asia/Kolkata"
+  },
+  "East": {
+    "Country": "India",
+    "Currency": "INR",
+    "Timezone": "Asia/Kolkata"
+  },
+  "West": {
+    "Country": "India",
+    "Currency": "INR",
+    "Timezone": "Asia/Kolkata"
+  },
+  "Central": {
+    "Country": "India",
+    "Currency": "INR",
+    "Timezone": "Asia/Kolkata"
+  }
+}

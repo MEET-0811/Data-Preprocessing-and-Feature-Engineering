@@ -1,0 +1,1 @@
+'Customer_ID' looks like a unique identifier (high cardinality)
