@@ -1,0 +1,91 @@
+{
+  "preprocessing": {
+    "remove_duplicates": true,
+    "duplicate_subset": [
+      "customer_id",
+      "purchase_date",
+      "amount"
+    ],
+    "missing_values_strategy": {
+      "amount": "median",
+      "product_category": "constant",
+      "customer_age": "mean",
+      "purchase_date": "drop"
+    },
+    "outlier_columns": [
+      "amount",
+      "quantity"
+    ],
+    "outlier_method": "iqr",
+    "outlier_threshold": 1.5,
+    "type_mapping": {
+      "purchase_date": "datetime",
+      "customer_id": "string",
+      "amount": "float64",
+      "product_category": "category"
+    },
+    "text_columns": [
+      "product_category",
+      "customer_segment"
+    ]
+  },
+  "features": {
+    "monetary_features": {
+      "amount_col": "amount",
+      "transaction_col": "customer_id"
+    },
+    "temporal_features": {
+      "date_col": "purchase_date"
+    },
+    "customer_lifecycle_features": {
+      "customer_col": "customer_id",
+      "date_col": "purchase_date"
+    },
+    "frequency_features": {
+      "customer_col": "customer_id"
+    },
+    "category_features": {
+      "category_col": "product_category"
+    },
+    "rfm_features": {
+      "customer_col": "customer_id",
+      "amount_col": "amount",
+      "date_col": "purchase_date"
+    }
+  },
+  "feature_summary": {
+    "total_features": 26,
+    "engineered_features": [
+      "total_spending",
+      "spending_quartile",
+      "is_high_value",
+      "year",
+      "month",
+      "quarter",
+      "day_of_week",
+      "is_weekend",
+      "is_holiday_season",
+      "first_purchase_date",
+      "last_purchase_date",
+      "customer_age_days",
+      "recency_days",
+      "purchase_frequency",
+      "frequency_category",
+      "category_beauty",
+      "category_books",
+      "category_clothing",
+      "category_electronics",
+      "category_groceries",
+      "category_home  garden",
+      "category_sports",
+      "category_toys",
+      "rfm_recency",
+      "rfm_frequency",
+      "rfm_monetary"
+    ],
+    "dataframe_shape": [
+      1936,
+      43
+    ]
+  }
+}
